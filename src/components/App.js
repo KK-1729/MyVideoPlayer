@@ -12,7 +12,7 @@ class App extends React.Component {
         this.onTermSubmit('cricket')
     }
 
-    onTermSubmit = async term => {
+    onTermSubmit = async function(term) {
         const response = await youtube.get('/search', {
             params: {
                 q: term
@@ -25,7 +25,7 @@ class App extends React.Component {
         });
     };
 
-    onVideoSelect = video => {
+    onVideoSelect = function(video) {
         this.setState({selectedVideo: video});
     };
 
